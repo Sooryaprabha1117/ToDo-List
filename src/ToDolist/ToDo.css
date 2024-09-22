@@ -1,0 +1,125 @@
+/* Main app container */
+.app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px; /* Adds space at the top of the page */
+    height: 100vh;
+    background: linear-gradient(to right, #f0f8ff, #d8e2dc);
+    transition: background 0.5s;
+  }
+  
+  /* Celebrate gradient animation */
+  .app.celebrate {
+    animation: blink-gradient 1s infinite;
+  }
+  
+  @keyframes blink-gradient {
+    0% {
+      background: linear-gradient(to right, rgb(243, 73, 73), #ffc371,rgb(164, 240, 233));
+    }
+    20%{
+        background: linear-gradient(to right, #ff9a9e, #fad0c4,rgb(243, 119, 150));
+    }
+    50% {
+      background: linear-gradient(to right, #ff9a9e, #fad0c4,rgb(222, 243, 148));
+    }
+    70%{
+        background: linear-gradient(to right, #89d3e0, #fad0c4,rgb(243, 119, 150));
+    }
+    100% {
+      background: linear-gradient(to right, #ff5f6d, #ffc371,rgb(248, 181, 181));
+    }
+  }
+  
+  /* Centered Heading styling */
+  .heading {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .todo {
+    background-color: red;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+  
+  .list {
+    color: black;
+  }
+  
+  /* To-Do container with margin and aligned to the top */
+  .todo-container {
+    width: 60%; /* Occupies 60% of the screen, leaving 20% margin on each side */
+    max-width: 400px;
+    padding: 20px;
+    margin: 0 auto; /* Center horizontally but stays at the top */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Input section styles */
+  .input-container {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Task list styles */
+  .task-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .task-text {
+    flex-grow: 1;
+    text-align: left;
+    margin-right: 10px;
+  }
+  
+  .task-buttons {
+    display: flex;
+    gap: 5px;
+  }
+  
+  li.completed .task-text {
+    text-decoration: line-through;
+    color: grey;
+  }
+  
